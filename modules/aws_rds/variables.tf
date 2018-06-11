@@ -21,23 +21,16 @@ variable "allocated_storage" {
 }
 
 variable "name" {
-  default = "jirasde"
+  default = "jira_rds"
 }
 
-variable "username" {
-  default = "jiradbuser"
-}
-
-variable "password" {
-  default = "n54b3I5dAmHPPupe"
-}
 
 variable "port" {
   default = 5432
 }
 
 variable "snapshot_identifier" {
-  default = "jirasdemo"
+  default = "jirasnap"
 }
 
 variable "vpc_security_group_ids" {
