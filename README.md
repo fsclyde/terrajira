@@ -11,7 +11,7 @@ This module allows you to set up the following components by using terraform:
 * Database Jira: Hosted on AWS RDS 
 * jenkins Server: Hosted on AWS ec2 micro
 
-![ TerraJiraImage ]()
+![ TerraJiraImage ](https://github.com/fsclyde/terrajira/blob/master/images/TerraProject.jpg)
 
 
 ### installation and configuration
