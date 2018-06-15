@@ -1,6 +1,6 @@
 
 variable "name" {
-  default = "jenkinsde"
+  default = "jenkins"
 }
 
 variable "aws_default_vpc" {

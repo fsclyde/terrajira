@@ -18,7 +18,7 @@ resource "google_compute_subnetwork" "default" {
 
 // Google compute instance
 resource "google_compute_instance" "default" {
-  name                      = "${var.name}"
+  name                      = "${var.name}-instance"
   zone                      = "${var.zone}"
   machine_type              = "${var.machine_type}"
   min_cpu_platform          = "${var.min_cpu_platform}"

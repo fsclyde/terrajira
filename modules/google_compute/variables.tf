@@ -14,7 +14,7 @@ variable "machine_type" {
 
 variable "name" {
   description = "Name prefix for the nodes"
-  default     = "jirasde2"
+  default     = "jira"
 }
 
 variable "image_family" {
@@ -63,7 +63,7 @@ variable "network_cidr" {
 }
 
 variable "network_name" {
-  default = "tf-jirasde"
+  default = "tf-jira-network"
 }
 
 variable "ssh_source" {

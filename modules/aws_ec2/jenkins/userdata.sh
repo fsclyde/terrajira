@@ -14,7 +14,7 @@ sudo curl -L https://github.com/docker/compose/releases/download/1.21.2/docker-c
 
 # Configure Docker Machine
 sudo usermod -aG docker $USER
-docker-machine create --driver amazonec2 --amazonec2-access-key $ACCESS_KEY -amazonec2-secret-key $SECRET_KEY
+docker-machine create --driver amazonec2 --amazonec2-access-key $ACCESS_KEY -amazonec2-secret-key $SECRET_KEY --region us-east-2
 docker-machine env aws02
 docker-machine start aws02
 chmod +x /usr/local/bin/docker-compose

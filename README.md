@@ -16,6 +16,14 @@ This module allows you to set up the following components by using terraform:
 
 ### installation and configuration
 
+### On your filesystem
+
+    // Generate private / public key to connect to your AWS instance
+    ssh-keygen -b 4096 -f ~/.ssh/id_rsa.pub
+    
+    // SSH connection
+     ssh -i ~/.ssh/id_rsa ec2_user@ec2-[DNS].compute.amazonaws.com
+
 #### AWS prerequisites 
 
 1) Roles and Access keys configuration
@@ -36,7 +44,8 @@ Add the following lines to the script *creds/google_secret.json*
    
 #### Google Cloud Platform prerequisites 
 
-1) 
+1) Create google cloud credentials JSON make sure the project ID match
+2) Enable "Cloud Resource Manager API"
 
 ### terraform
 
@@ -52,6 +61,6 @@ Add the following lines to the script *creds/google_secret.json*
     terraform apply -var-file=creds/secret.tfvars
     
     // Optional: destroy -> To delete the entire infrastructure and data.
-    terraform destroy
+    terraform destroy -var-file=creds/secret.tfvars
     
 
