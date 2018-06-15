@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # Configure secret
-sh secret.sh
+sh ././../../../creds/secret.sh
 
 # update linux and install docker
 sudo yum install docker  docker-compose git -y

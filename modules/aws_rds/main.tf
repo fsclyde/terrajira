@@ -1,10 +1,11 @@
 // AWS
+variable "username" {}
+variable "password" {}
 
 // AWS Security group
 module "postgresql_security_group" {
   source = "terraform-aws-modules/security-group/aws//modules/postgresql"
-  source = "../../modules/google_compute"
-
+  source = "../../terrajira"
 
   name        = "${var.name}-db"
   description = "Security group for user-service with custom ports open within VPC, and PostgreSQL publicly open"

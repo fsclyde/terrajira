@@ -1,7 +1,5 @@
-creds
+creds*
 modules/google_compute/jira/atlassian-jira-software-7.10.0-x64.bin
-modules/aws_ec2/jenkins/secret.sh
 .terraform*
-terraform.tfstate
-terraform.tfstate.backup
+terraform*
 .idea*

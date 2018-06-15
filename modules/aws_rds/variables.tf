@@ -1,7 +1,7 @@
 
 // AWS variables
 variable "identifier" {
-  default = "jirasde"
+  default = "jirards"
 }
 
 variable "engine" {
@@ -21,9 +21,8 @@ variable "allocated_storage" {
 }
 
 variable "name" {
-  default = "jira_rds"
+  default = "jirards"
 }
-
 
 variable "port" {
   default = 5432
