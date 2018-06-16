@@ -24,10 +24,12 @@ module "jenkins_security_group" {
 }
 
 // Need to change this with the location of your public key
-resource "aws_key_pair" "terraform_ec2_key" {
-  key_name = "terraform_ec2_key"
-  public_key = "${file("~/.ssh/id_rsa.pub")}"
-}
+//resource "aws_key_pair" "terraform_ec2_key" {
+//  key_name = "secdevops-20062018"
+//  key_name = "terraform_ec2_key"
+//  public_key = "${file("~/.ssh/id_rsa.pub")}"
+//}
+
 
 // AWS Ec2
 module "aws_ec2" {
@@ -39,7 +41,8 @@ module "aws_ec2" {
   
   ami                    = "${var.aim}"
   instance_type          = "t2.micro"
-  key_name               = "terraform_ec2_key"
+//  key_name               = "terraform_ec2_key"
+  key_name               = "secdevops-20062018"
   monitoring             = false
   vpc_security_group_ids = ["${module.jenkins_security_group.this_security_group_id}"]
   subnet_id              = "${var.subnet_id}"
