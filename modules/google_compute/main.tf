@@ -61,6 +61,7 @@ resource "google_compute_instance" "default" {
 }
 
 // google network Firewall
+// Ingress rule for Jira
 resource "google_compute_firewall" "ssh" {
   name    = "${var.name}-ssh"
   network = "${google_compute_subnetwork.default.name}"
@@ -72,6 +73,20 @@ resource "google_compute_firewall" "ssh" {
 
   source_ranges = ["${var.ssh_source}"]
   target_tags = ["${var.name}-ssh"]
+}
+
+// Egress rule for Jira
+resource "google_compute_firewall" "all" {
+  name    = "${var.name}-all"
+  network = "${google_compute_subnetwork.default.name}"
+
+  allow {
+    protocol = "all"
+    ports    = ["all"]
+  }
+
+  destination_ranges = ["0.0.0.0/0"]
+  target_tags = ["${var.name}-all"]
 }
 
 output "public_ip" {

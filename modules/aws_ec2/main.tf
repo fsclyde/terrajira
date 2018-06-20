@@ -42,7 +42,7 @@ module "aws_ec2" {
   ami                    = "${var.aim}"
   instance_type          = "t2.micro"
 //  key_name               = "terraform_ec2_key"
-  key_name               = "secdevops-20062018"
+  key_name               = "${var.keyname}"
   monitoring             = false
   vpc_security_group_ids = ["${module.jenkins_security_group.this_security_group_id}"]
   subnet_id              = "${var.subnet_id}"
@@ -57,5 +57,6 @@ module "aws_ec2" {
   }
 
 }
+
 
 

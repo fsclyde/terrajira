@@ -71,9 +71,3 @@ variable "ssh_source" {
 }
 
 
-// Startup script
-variable "startup_script" {
-  description = "Content of startup-script metadata passed to the instance template."
-  default     = "sudo sh jira/atlassian-jira-software-7.10.0-x64.bin -q -varfile response.varfile"
-}
-

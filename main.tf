@@ -27,7 +27,7 @@ module "aws_ec2" {
 //variable rds_password {}
 //module "aws_rds" {
 // source = "./modules/aws_rds"
-//  username = "${var.rds_username}"
+// username = "${var.rds_username}"
 // password = "${var.rds_username}"
 //}
 

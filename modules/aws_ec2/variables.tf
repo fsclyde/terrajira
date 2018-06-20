@@ -8,7 +8,7 @@ variable "aws_default_vpc" {
 }
 
 variable "keyname" {
-  default = "secops-04062018"
+  default = "secops-19062018"
 }
 
 variable "subnet_id" {
@@ -19,3 +19,6 @@ variable "aim" {
   default = "ami-2a0f324f"
 }
 
+variable "S3_BUCKET" {
+  default = "terrajira-secterraform"
+}
