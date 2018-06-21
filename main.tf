@@ -13,9 +13,9 @@ provider "google" {
 }
 
 // Google Cloud
-//module "google_compute" {
-//  source = "./modules/google_compute"
-//}
+module "google_compute" {
+  source = "./modules/google_compute"
+}
 
 // AWS Ec2 for jenkins
 module "aws_ec2" {
@@ -23,12 +23,12 @@ module "aws_ec2" {
 }
 
 // AWS RDS for jira
-//variable rds_username {}
-//variable rds_password {}
-//module "aws_rds" {
-// source = "./modules/aws_rds"
-// username = "${var.rds_username}"
-// password = "${var.rds_username}"
-//}
+variable rds_username {}
+variable rds_password {}
+module "aws_rds" {
+source = "./modules/aws_rds"
+ username = "${var.rds_username}"
+ password = "${var.rds_username}"
+}
 
 

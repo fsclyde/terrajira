@@ -77,4 +77,7 @@ Optional: destroy -> To delete the entire infrastructure and data.
 
     terraform destroy -var-file=creds/secret.tfvars
     
+TODO
 
+  * Add output for all the hostname + add Jira IP into RDS VPC (manual step for now)
+  * Jenkins userscript to set up docker compose

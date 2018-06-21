@@ -3,6 +3,7 @@
 # Configure secret
 export ACCESS_KEY=""
 export SECRET_KEY=""
+export BUCKET_NAME=""
 
 # update linux and install docker
 sudo yum update -y
@@ -15,7 +16,7 @@ base=https://github.com/docker/machine/releases/download/v0.14.0 && sudo curl -L
 sudo curl -L https://github.com/docker/compose/releases/download/1.21.2/docker-compose-$(uname -s)-$(uname -m) -o /usr/local/bin/docker-compose
 
 # This needs to be change by the repos of jenkins docker compose
-wget https://s3.us-east-2.amazonaws.com/terrajira-secterraform/jenkins.zip -P /tmp/
+wget https://s3.us-east-2.amazonaws.com/${BUCKET_NAME}/jenkins.zip -P /tmp/
 unzip /tmp/jenkins.zip
 cd /jenkins/
 
