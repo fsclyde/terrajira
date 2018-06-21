@@ -81,3 +81,4 @@ TODO
 
   * Add output for all the hostname + add Jira IP into RDS VPC (manual step for now)
   * Jenkins userscript to set up docker compose
+  * Configure docker machine with terraform
